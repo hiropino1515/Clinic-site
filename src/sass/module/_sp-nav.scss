@@ -1,0 +1,61 @@
+@use 'global' as *;
+
+.sp-nav {
+  position: absolute;
+  display: none;
+  top: rem(79);
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $main;
+  z-index: 2;
+}
+
+.sp-nav.is-active {
+  display: block;
+}
+
+.sp-nav__inner {
+  height: inherit;
+  overflow: scroll;
+}
+
+.sp-nav__items {
+  column-count: 2;
+  column-gap: 0;
+  padding: rem(5) rem(15) rem(85) ;
+  min-height: 100vh;
+  z-index: 300;
+}
+
+.sp-nav__item {
+  width: 100%;
+  padding-left: rem(22);
+  background: url(../images/common/hitode.png);
+  background-repeat: no-repeat;
+  background-size: rem(18) rem(18);
+  background-position: 0 rem(20);
+}
+
+.sp-nav__item a {
+  text-align: left;
+  display: block;
+  font-size: rem(16);
+  color: $white;
+  font-family: $base-font-family;
+  font-weight: $bold;
+  line-height: 1.125;
+  padding: rem(20) 0;
+}
+
+.sp-nav__item ul li a {
+  text-align: left;
+  display: block;
+  font-size: rem(16);
+  color: $white;
+  font-family: $base-font-family;
+  font-weight: normal;
+  line-height: 1.125;
+  padding: rem(12) 0;
+}

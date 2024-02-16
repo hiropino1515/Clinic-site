@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.button {
+  display: inline-block;
+  padding: rem(11) rem(46);
+  color: $main;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+  background-color: $white;
+  border: 1px solid $main;
+  border-radius: rem(24);
+  white-space: nowrap;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.button span {
+  position: absolute;
+  background-image: url(../images/common/btn-arrow_blue.svg);
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  right: rem(12);
+  display: inline-block;
+  width: rem(12);
+  height: rem(12);
+  transition: all 0.3s;
+}
+
+.button:hover {
+  color: $white;
+  background-color: $main;
+}
+
+.button:hover span {
+  background-image: url(../images/common/btn-arrow_white.svg);
+  right: rem(8);
+}

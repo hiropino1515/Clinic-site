@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.button-web {
+  padding: rem(20) rem(17) rem(21);
+  background-color: $main;
+  border-radius: rem(20) 0 0 rem(20);
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(11);
+  width: rem(92);
+  transition: all 0.3s;
+}
+
+.button-web span {
+  margin-inline: auto;
+  display: inline-block;
+  width: rem(52);
+  height: rem(32);
+  background-image: url(../images/common/btn-web_icon.svg);
+  background-size: cover;
+}
+
+.button-web p {
+  color: $white;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: calc(18.2 / 14); /* 18.2px */
+}
+
+.button-web:hover {
+  background-color: $sub-1;
+}
