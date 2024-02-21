@@ -1,0 +1,123 @@
+@use 'global' as *;
+
+.recommend {
+
+}
+
+.recommend__inner {
+
+}
+
+.recommend__title {
+  text-align: center;
+}
+
+.recommend__list {
+  margin-top: rem(39);
+  @include mq('md') {
+    margin-top: rem(60);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.recommend__item{
+  // max-width: rem(316);
+  margin-inline: auto;
+}
+
+.recommend__item + .recommend__item:not(:first-child) {
+  margin-top: rem(57);
+  @include mq('md') {
+    margin-top: 0;
+    margin-left: rem(66);
+  }
+}
+
+.recommend__item-title {
+  text-align: center;
+}
+
+.recommend__item-title img {
+  display: inline-block;
+  width: rem(177);
+  aspect-ratio: 177 / 32;
+}
+
+.recommend__item-image {
+  margin-top: rem(6);
+  text-align: center;
+  position: relative;
+  @include mq('md') {
+    margin-top: rem(15);
+  }
+}
+
+.recommend__item-image img {
+  display: inline-block;
+  width: rem(220);
+  aspect-ratio: 1 /1;
+}
+
+.recommend__item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recommend__item-point {
+  position: relative;
+}
+
+.recommend__item-point p {
+  position: absolute;
+  top: rem(-26);
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: rem(7) rem(20);
+  width: rem(276);
+  color: $white;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  border-radius: rem(22);
+  background: $main;
+  position: relative;
+}
+
+.recommend__item-point p::after {
+  content: "";
+  position: absolute;
+  top: 112%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(20);
+  height: rem(26);
+  background-image: url(../images/common/recommend-item_polygon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.recommend__item-text {
+  margin-top: rem(10);
+  margin-inline: auto;
+  width: rem(276);
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.71429;
+}
+
+.recommend__item-text span {
+  color: $accent;
+}
+

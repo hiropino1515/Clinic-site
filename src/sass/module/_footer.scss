@@ -1,0 +1,222 @@
+@use 'global' as *;
+
+.footer {
+  background-color: $sub-2;
+}
+
+.footer__inner {
+  padding-top: rem(13);
+  padding-bottom: rem(60);
+  @include mq('md') {
+    padding-top: rem(56);
+  }
+}
+
+.footer__information {
+  background-color: $white;
+  padding: rem(32) rem(10) rem(20);
+  border-radius: rem(8);
+  @include mq('md') {
+    padding: rem(40) rem(49);
+    border-radius: rem(20);
+  }
+}
+
+.footer__contents {
+
+}
+
+.footer__logo {
+  width: rem(270);
+  margin-inline: auto;
+}
+
+.footer__logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo-img {
+  display: inline-block;
+  width: rem(38.452);
+  height: rem(33);
+}
+
+.footer__logo-title {
+  margin-left: rem(11);
+  display: inline-block;
+  position: relative;
+  width: rem(225);
+  z-index: 500;
+}
+
+.footer__address {
+  margin-top: rem(11);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.footer__address p {
+  margin-left: rem(14);
+}
+
+.footer__tel {
+  margin-top: rem(21);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.footer__tel img {
+  aspect-ratio: 1 / 1;
+  width: rem(28);
+}
+
+.footer__tel a {
+  margin-left: rem(4);
+  display: inline-block;
+  color: $main;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(32);
+  font-style: normal;
+  font-weight: $bold;
+  line-height:calc(36 / 32);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.footer__tel-reception {
+  position: absolute;
+  bottom: rem(-16);
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(170);
+  color: $main;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(12);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.footer__button {
+  margin-top: rem(41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__button a:nth-of-type(2) {
+  margin-left: rem(15);
+}
+
+.footer__medical-time {
+  margin-top: rem(20);
+}
+
+.footer__map {
+  margin-top: rem(20);
+  padding: 0 rem(10);
+}
+
+.footer__map iframe {
+  display: block;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+}
+
+.footer__sitemap {
+  margin-top: rem(59);
+  @include mq('md') {
+    margin-top: rem(43);
+  }
+}
+
+.footer__sitemap-inner {
+
+}
+
+.footer__sitemap-list {
+
+}
+
+.footer__sitemap-item + .footer__sitemap-item:not(:first-child) {
+  margin-top: rem(21);
+}
+
+.footer__sitemap-item:nth-of-type(4) .footer__sitemap-contents {
+  display: grid;
+  grid-template-columns: rem(76) rem(124);
+  column-gap: rem(20);
+}
+
+.footer__sitemap-title {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+}
+
+.footer__sitemap-contents {
+  margin-top: rem(9);
+}
+
+.footer__sitemap-content {
+
+}
+
+.footer__sitemap-content-link {
+  padding: rem(9) 0;
+  display: flex;
+  align-items: center;
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.footer__sitemap-content-link span {
+  display: block;
+  width: rem(6);
+  height: rem(12);
+  background-image: url(../images/common/footer_sitemap-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer__sitemap-content-link p {
+  margin-left: rem(6);
+}
+
+.footer__copyright {
+  padding-top: rem(18);
+  padding-bottom: rem(73);
+  background-color: $main;
+  color: #FFF;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+  @include mq('md') {
+    padding-top: rem(16);
+    padding-bottom: rem(18);
+  }
+}
+

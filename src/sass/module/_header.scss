@@ -24,9 +24,13 @@
   margin-right: auto;
   margin-left: auto;
   @include mq("md") {
-    padding-right: rem(20);
-    padding-left: rem(40);
+    padding-right: min(3.4vw, rem(40));
+    padding-left: min(3.4vw, rem(40));
   }
+}
+
+.header__logo {
+  width: rem(270);
 }
 
 .header__logo-link {

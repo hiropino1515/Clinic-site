@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.button-contact {
+  display: inline-block;
+  padding: rem(8) rem(20) rem(9) rem(46);
+  color: $main;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+  background-color: $white;
+  border: 1px solid $main;
+  border-radius: rem(30);
+  white-space: nowrap;
+  transition: all 0.3s;
+  position: relative;
+  @include mq('md') {
+    padding: rem(16) rem(46) rem(16) rem(78);
+    font-size: rem(16);
+  }
+}
+
+.button-contact.button-contact--web {
+  padding: rem(8) rem(30) rem(9) rem(63);
+  color: $white;
+  background-color: $main;
+  @include mq('md') {
+    padding: rem(16) rem(59) rem(16) rem(95);
+  }
+}
+
+.button-contact span {
+  background-image: url(../images/common/button-contact_email-icon.png);
+  background-size: cover;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: rem(20);
+  width: rem(17);
+  height: rem(17);
+  transition: all 0.3s;
+  @include mq('md') {
+    width: rem(24);
+    height: rem(24);
+    left: rem(46);
+  }
+}
+
+.button-contact.button-contact--web span {
+  background-image: url(../images/common/button-contact_web-icon.png);
+  width: rem(35);
+  height: rem(20);
+  left: rem(28);
+  @include mq('md') {
+    width: rem(30);
+    height: rem(20);
+    left: rem(54);
+  }
+}
+
+.button-contact:hover {
+  opacity: 0.7;
+}
