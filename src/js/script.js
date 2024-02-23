@@ -33,7 +33,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       delay: 3000,
       disableOnInteraction: false,
     },
-    speed: 2500, // 2.5秒かけながら次の画像へ移動
+    speed: 2000, // 2.5秒かけながら次の画像へ移動
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
@@ -42,6 +42,28 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     pagination: {
       el: ".swiper-pagination",
     },
+  });
+
+  // ページトップボタン
+  $(function () {
+    const pageTop = $("#to-top");
+    pageTop.hide();
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 300) {
+        pageTop.fadeIn();
+      } else {
+        pageTop.fadeOut();
+      }
+    });
+    pageTop.click(function () {
+      $("body,html").animate(
+        {
+          scrollTop: 0,
+        },
+        500
+      );
+      return false;
+    });
   });
 
 });

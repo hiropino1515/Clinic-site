@@ -1,23 +1,79 @@
 @use 'global' as *;
 
 .information {
-  background-color: $sub-2;
+
 }
 
-.information__top-bg img {
-  // min-height: rem(34);
-  // background-image: url(../images/common/information_top-bg_sp.png);
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // @include mq('md') {
-  //   background-image: url(../images/common/information_bg-top_pc.png);
-  //   max-height: rem(107);
-  // }
-    aspect-ratio: 375 / 34;
-    height: auto;
-    @include mq('md') {
-      aspect-ratio: 1280 / 107;
-    }
+.information__top-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 375 / 34;
+  object-fit: contain;
+  @include mq('md') {
+    aspect-ratio: 1280 / 107;
+  }
+}
+
+.information__top-deco-nose {
+  position: absolute;
+  top: rem(-48);
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(59);
+  aspect-ratio: 1 /1 ;
+  background-image: url(../images/common/information_top-deco-nose_sp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include mq('md') {
+    top: rem(-96);
+    width: rem(100);
+    aspect-ratio: 100 / 90;
+    background-image: url(../images/common/information_top-deco-nose_pc.png);
+  }
+}
+
+.information__top-deco-right {
+  position: absolute;
+  top: rem(-16);
+  right: 0;
+  transform: translateX(-50%);
+  width: rem(25);
+  aspect-ratio: 1 /1 ;
+  background-image: url(../images/common/information_top-deco-right_sp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include mq('md') {
+    right: rem(8);
+    top: rem(-32);
+    width: rem(58);
+    background-image: url(../images/common/information_top-deco-right_pc.png);
+  }
+}
+
+.information__top-deco-left {
+  position: absolute;
+  top: rem(-44);
+  left: rem(32);
+  transform: translateX(-50%);
+  width: rem(50);
+  aspect-ratio: 50 / 55 ;
+  background-image: url(../images/common/information_top-deco-left_sp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include mq('md') {
+    width: rem(126);
+    top: rem(-88);
+    left: rem(86);
+    aspect-ratio: 126 / 138;
+    background-image: url(../images/common/information_top-deco-left_pc.png);
+  }
+}
+
+
+
+.information__bg {
+  background-color: $sub-2;
 }
 
 .information__inner {
@@ -38,6 +94,7 @@
   @include mq('md') {
     margin-top: rem(60);
     display: flex;
+    justify-content: center;
   }
 }
 
@@ -104,10 +161,10 @@
 .information__item-title::after {
   content: "";
   position: absolute;
-  bottom: rem(-20);
+  bottom: rem(-24);
   left: 50%;
   transform: translateX(-50%);
-  width: rem(20);
+  width: rem(28);
   height: rem(2);
   background-color: $white;
 }
@@ -138,6 +195,10 @@
   font-style: normal;
   font-weight: $normal;
   line-height: 1.71429;
+  @include mq('md') {
+    padding: rem(38) rem(40);
+    margin-top: rem(60);
+  }
 }
 
 .information__text span {
@@ -145,13 +206,53 @@
 }
 
 .information__bottom-bg {
-  height: rem(28);
-  background-image: url(../images/common/information_bottom-bg_sp.png);
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 375 / 34;
+  object-fit: contain;
+  position: relative;
+  @include mq('md') {
+    aspect-ratio: 1280 / 107;
+  }
+}
+
+.information__bottom-deco-left {
+  position: absolute;
+  top: rem(-36);
+  left: rem(24);
+  transform: translateX(-50%);
+  width: rem(24);
+  aspect-ratio: 24 / 25 ;
+  background-image: url(../images/common/information_bottom-deco-left_sp.png);
   background-size: contain;
   background-repeat: no-repeat;
   @include mq('md') {
-    background-image: url(../images/common/information_bg-bottom_pc.png);
-    height: rem(97);
+    top: rem(-52);
+    left: rem(70);
+    width: rem(57);
+    aspect-ratio: 57 / 56;
+    background-image: url(../images/common/information_bottom-deco-left_pc.png);
   }
 }
+
+.information__bottom-deco-right {
+  position: absolute;
+  top: rem(-52);
+  right: rem(-20);
+  transform: translateX(-50%);
+  width: rem(56);
+  aspect-ratio: 56 / 60 ;
+  background-image: url(../images/common/information_bottom-deco-right_sp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include mq('md') {
+    top: rem(-114);
+    right: rem(-42);
+    width: rem(125.307);
+    aspect-ratio: 125.307 / 138;
+    background-image: url(../images/common/information_bottom-deco-right_pc.png);
+  }
+}
+
+
 

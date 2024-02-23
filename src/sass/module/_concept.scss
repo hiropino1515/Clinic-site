@@ -92,19 +92,19 @@
 
 .concept__bg {
   position: absolute;
-  top: 40%;
-  left: 1%;
-  width: rem(554);
-  height: rem(304);
+  top: 27%;
+  left: calc(50% - min(48vw, 11.5rem));
+  width: 150%;
+  height: rem(308);
   background-image: url(../images/common/concept-bg_sp.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   z-index: -1;
   @include mq('md') {
     top: 20%;
-    left: 50%;
+    left: calc(50% - min(48vw, 13.5rem));
     width: rem(1726);
-    height: rem(726);
+    height: 80%;
     background-image: url(../images/common/concept-bg_pc.png);
   }
 }

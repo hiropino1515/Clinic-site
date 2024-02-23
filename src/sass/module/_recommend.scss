@@ -27,7 +27,7 @@
 }
 
 .recommend__item + .recommend__item:not(:first-child) {
-  margin-top: rem(57);
+  margin-top: rem(60);
   @include mq('md') {
     margin-top: 0;
     margin-left: rem(66);
@@ -72,7 +72,7 @@
 
 .recommend__item-point p {
   position: absolute;
-  top: rem(-26);
+  top: rem(-30);
   left: 50%;
   transform: translateX(-50%);
   display: inline-block;
@@ -106,9 +106,9 @@
 }
 
 .recommend__item-text {
-  margin-top: rem(10);
+  margin-top: rem(4);
   margin-inline: auto;
-  width: rem(276);
+  width: rem(282);
   color: $black;
   font-family: $base-font-family;
   font-size: rem(14);

@@ -1,37 +1,25 @@
 @use 'global' as *;
 
-.blog {
-
-}
-
-.blog__inner {
-
-}
-
 .blog__title {
   text-align: center;
 }
 
 .blog__list {
-  margin-top: rem(48);
+  margin-top: rem(42);
   @include mq('md') {
     margin-top: rem(80);
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
     column-gap: rem(50);
-    row-gap: rem(60);
+    row-gap: rem(58);
   }
 }
 
 .blog__item + .blog__item:not(:first-child) {
-  margin-top: rem(20);
+  margin-top: rem(14);
   @include mq('md') {
     margin-top: 0;
   }
-}
-
-.blog__link {
-
 }
 
 .blog__button {

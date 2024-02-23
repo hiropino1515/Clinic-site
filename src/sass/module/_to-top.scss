@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.to-top {
+  position: fixed;
+  right: rem(10);
+  bottom: rem(97);
+  width: rem(52);
+  height: rem(52);
+  overflow: hidden;
+  z-index: 100;
+  transition: all 0.3s;
+  @include mq('md') {
+    right: rem(40);
+    bottom: rem(40);
+  }
+}
+
+.to-top:hover {
+  opacity: 0.8;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.to-top a {
+  display: inline-block;
+}
+
+.to-top span {
+  display: inline-block;
+  width: rem(52);
+  height: rem(52);
+  background-image: url(../images/common/to-top.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .layout-concept {
-  padding-top: 102%;
+  padding-top: rem(384);
   @include mq('md') {
-    padding-top: 29%;
+    padding-top: rem(370);
     padding-bottom: rem(108);
   }
 }
