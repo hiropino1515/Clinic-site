@@ -3,6 +3,7 @@
 .blog-card {
   display: flex;
   align-items: center;
+  position: relative;
   @include mq('md') {
     flex-direction: column;
     border-radius: rem(20);
@@ -10,20 +11,12 @@
   }
 }
 
-.blog-card__image {
-  position: relative;
-  min-width: rem(133);
-  @include mq('md') {
-    width: 100%;
-  }
+.blog-card:hover .blog-card__image img {
+  transform: scale(1.1);
 }
 
-.blog-card__image img {
-  aspect-ratio: 133 / 101;
-  @include mq('md') {
-    aspect-ratio: 300 / 188;
-    border-radius: rem(20) rem(20) 0 0;
-  }
+.blog-card:hover .blog-card__title {
+  color: $main;
 }
 
 .blog-card__new-post {
@@ -37,6 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
   @include mq('md') {
     width: rem(60);
     height: rem(60);
@@ -55,6 +49,25 @@
   line-height: normal;
   @include mq('md') {
     font-size: rem(16);
+  }
+}
+
+.blog-card__image {
+  position: relative;
+  min-width: rem(133);
+  overflow: hidden;
+  @include mq('md') {
+    width: 100%;
+    border-radius: rem(20) rem(20) 0 0;
+  }
+}
+
+.blog-card__image img {
+  transition: all 0.3s;
+  aspect-ratio: 133 / 101;
+  @include mq('md') {
+    aspect-ratio: 300 / 188;
+    border-radius: rem(20) rem(20) 0 0;
   }
 }
 
@@ -99,6 +112,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 任意の行数を指定 */
+  transition: all 0.3s;
   @include mq('md') {
     margin-top: 0;
     font-size: rem(16);
@@ -107,6 +121,7 @@
     -webkit-line-clamp: initial;
   }
 }
+
 
 .blog-card__date {
   margin-top: rem(6);

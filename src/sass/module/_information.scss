@@ -107,40 +107,66 @@
 }
 
 .information__item-link {
-
+  position: relative;
 }
 
-.information__item-image1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../images/common/information_item-bg-img1_sp.jpg);
+.information__item-link:hover .information__item-image img {
+  transform: scale(1.1);
+}
+
+.information__item-image {
+  border-radius: 20px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.information__item-image img {
   aspect-ratio: 335 / 210;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: rem(20);
+  height: 100%;
+  transition: all 0.3s;
   @include mq('md') {
-    padding: rem(76) rem(110);
     aspect-ratio: 460 / 290;
   }
 }
 
-.information__item-image2 {
+.information__item-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.information__item-link:hover .information__item-image::before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.information__item-link:hover .information__item-image::after {
+  content: "";
+  position: absolute;
+  inset: rem(7);
+  border-radius: 20px;
+  transition: all 0.3s;
+  border: 2px solid $white;
+  z-index: 1;
+}
+
+.information__item-body {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(../images/common/information_item-bg-img2_sp.jpg);
-  aspect-ratio: 335 / 210;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: rem(20);
-  @include mq('md') {
-    padding: rem(76) rem(110);
-    aspect-ratio: 460 / 290;
-    background-image: url(../images/common/information_item-bg-img2_pc.jpg);
-  }
 }
 
 .information__item-title {
@@ -153,6 +179,7 @@
   line-height: normal;
   letter-spacing: 0.08em;
   position: relative;
+  white-space: nowrap;
   @include mq('md') {
     font-size: rem(28);
   }
@@ -167,6 +194,7 @@
   width: rem(28);
   height: rem(2);
   background-color: $white;
+  z-index: 0;
 }
 
 .information__item-content {
@@ -179,9 +207,13 @@
   font-weight: $bold;
   line-height: normal;
   letter-spacing: 0.08em;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
   @include mq('md') {
     font-size: rem(16);
     letter-spacing: 0.0457em;
+    flex-grow: 1;
   }
 }
 

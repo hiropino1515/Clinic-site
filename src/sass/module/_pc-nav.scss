@@ -177,6 +177,11 @@
 .pc-nav__item-tel {
   display: flex;
   align-items: center;
+  transition: all 0.3;
+}
+
+.pc-nav__item-tel:hover {
+  opacity: 0.7;
 }
 
 .pc-nav__item-tel img {
@@ -196,8 +201,4 @@
   line-height: normal;
   letter-spacing: 0.01em;
   white-space: nowrap;
-}
-
-.pc-nav__item-tel a:hover {
-  opacity: 0.7;
 }
