@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.layout-concept {
+.layout-about {
   padding-top: rem(384);
   @include mq('md') {
     padding-top: rem(370);

@@ -1,0 +1,28 @@
+@use 'global' as *;
+
+.gallery {
+
+}
+
+.gallery__inner {
+
+}
+
+.gallery__title {
+  text-align: center;
+}
+
+.gallery__content {
+  margin-top: rem(40);
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  column-gap: rem(11);
+  row-gap: rem(11);
+  @include mq('md') {
+    margin-top: rem(60);
+    grid-template-columns: repeat(3 , 1fr);
+    column-gap: rem(24);
+    row-gap: rem(24);
+  }
+}
+

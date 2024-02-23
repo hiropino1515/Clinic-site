@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>みなみ歯科クリニック</title>
+  <meta name="description" content="街の皆さまの笑顔を守るアットホームな歯医者さん、みなみ歯科クリニックのホームページ。" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="”icon”" href="./assets/images/common/header-icon_dental.png" />
+  <!-- GoogleFont -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+   <!-- swiper -->
+   <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+ />
+   <!-- css -->
+   <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+<!-- header -->
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a class="header__logo-link" href="index.html">
+          <img class="header__logo-img" src="./assets/images/common/header-icon_dental.png" alt="笑顔の歯のイラスト">
+          <img class="header__logo-title" src="./assets/images/common/header_logo.png" alt="みなみ歯科クリニックのロゴ画像">
+        </a>
+      </h1>
+<!-- drawer -->
+      <div class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+<!-- pc-nav -->
+      <nav class="header__pc-nav pc-nav">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item">
+            <a href="#" class="pc-nav__item-link">
+              <div class="pc-nav__icon-home"></div>
+              <div class="pc-nav__item-title">ホーム</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#" class="pc-nav__item-link">
+              <div class="pc-nav__icon-clinic"></div>
+              <div class="pc-nav__item-title">当院について</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#" class="pc-nav__item-link">
+              <div class="pc-nav__icon-file-text"></div>
+              <div class="pc-nav__item-title">診療案内</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#" class="pc-nav__item-link">
+              <div class="pc-nav__icon-people"></div>
+              <div class="pc-nav__item-title">スタッフ紹介</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#" class="pc-nav__item-link">
+              <div class="pc-nav__icon-edit"></div>
+              <div class="pc-nav__item-title">スタッフブログ</div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#" class="pc-nav__item-link">
+              <div class="pc-nav__icon-email"></div>
+              <div class="pc-nav__item-title">お問い合わせ</div>
+            </a>
+          </li>
+          <li class="pc-nav__item pc-nav__item--info">
+            <div class="pc-nav__item-address">〒166-0001 東京都杉並区阿佐谷北7-3-1</div>
+            <div class="pc-nav__item-tel">
+              <img src="./assets/images/common/header-icon_tel.png" alt="電話のアイコン">
+              <a href="tel:03-1234-5678">03-1234-5678</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+<!-- sp-nav -->
+      <nav class="header__sp-nav sp-nav js-sp-nav">
+        <div class="sp-nav__inner">
+          <ul class="sp-nav__items">
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__item-link">
+                <div class="sp-nav__item-icon"><img src="./assets/images/common/sp-nav-icon_home.png" alt=""></div>
+                <div class="sp-nav__item-title">ホーム</div>
+                <span></span>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__item-link">
+                <div class="sp-nav__item-icon"><img src="./assets/images/common/sp-nav-icon_clinic.png" alt=""></div>
+                <div class="sp-nav__item-title">当院について</div>
+                <span></span>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__item-link">
+                <div class="sp-nav__item-icon"><img src="./assets/images/common/sp-nav-icon_file-text.png" alt=""></div>
+                <div class="sp-nav__item-title">診療案内</div>
+                <span></span>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__item-link">
+                <div class="sp-nav__item-icon"><img src="./assets/images/common/sp-nav-icon_people.png" alt=""></div>
+                <div class="sp-nav__item-title">スタッフ紹介</div>
+                <span></span>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__item-link">
+                <div class="sp-nav__item-icon"><img src="./assets/images/common/sp-nav-icon_edit.png" alt=""></div>
+                <div class="sp-nav__item-title">スタッフブログ</div>
+                <span></span>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__item-link">
+                <div class="sp-nav__item-icon"><img src="./assets/images/common/sp-nav-icon_email.png" alt=""></div>
+                <div class="sp-nav__item-title">お問い合わせ</div>
+                <span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+<!-- Bottom-nav -->
+    <nav class="header__sp-bottom-nav sp-bottom-nav">
+      <div class="sp-bottom-nav__inner">
+        <ul class="sp-bottom-nav__list">
+          <li class="sp-bottom-nav__item">
+            <div class="sp-bottom-nav__tel">
+              <img src="./assets/images/common/header-icon_tel.png" alt="電話のアイコン">
+              <a href="tel:03-1234-5678">03-1234-5678</a>
+            </div>
+            <div class="sp-bottom-nav__info">(年中無休 AM9:00〜PM22:00)</div>
+          </li>
+          <li class="sp-bottom-nav__item">
+            <a href="#" class="sp-bottom-nav__link">
+              <img src="./assets/images/common/btn-web_icon.svg" alt="">
+              <p class="sp-bottom-nav__link-text">
+                WEB予約
+                <span>はこちら</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- sub-fv -->
+  <div class="sub-fv layout-sub-fv">
+    <div class="sub-fv__inner">
+      <div class="sub-fv__image">
+        <picture>
+          <source srcset="./assets/images/common/page-about_top_pc.jpg" media="(min-width: 768px)">
+          <img src="./assets/images/common/page-about_top_sp.jpg" alt="みなみ歯科クリニックの診察台の様子">
+        </picture>
+      </div>
+      <div class="sub-fv__body">
+        <h2 class="sub-fv__title">当院について</h2>
+        <p class="sub-fv__lead">ABOUT OUR CLINIC</p>
+      </div>
+    </div>
+    <div class="sub-fv__button">
+      <a href="#" class="button-web">
+        <span></span>
+        <p>WEB予約<br>
+        はこちら</p>
+      </a>
+    </div>
+  </div>
+
+<!-- パンくず -->
+  <div class="breadcrumb layout-breadcrumb">
+    <div class="breadcrumb__inner">
+      <div><span>ホーム</span>> 当院について</div>
+    </div>
+  </div>
+
+  <main>
+    <!-- about -->
+    <section class="page-about layout-page-about">
+      <div class="page-about__title">
+        <h2 class="section-title">ポリシーと特徴</h2>
+      </div>
+      <div class="page-about__inner inner">
+        <div class="page-about__bg"></div>
+        <div class="page-about__item">
+          <div class="page-about__content">
+            <p class="page-about__features">POLICY</p>
+            <h3 class="page-about__sub-title">コミュニケーションから始まる最適な医療提供</h3>
+            <p class="page-about__lead">当院ではまず患者様から詳しくお話を伺います。<br>
+            難しい言葉は使わず、実際に感じている小さな違和感からあらゆる可能性を考え、最適な治療方法をご提案いたします。<br>
+            
+            「どこよりも本音で話せる歯医者さん」を目指し、スタッフ一同、「人間力の向上」にも勤めております。</p>
+          </div>
+          <div class="page-about__image">
+            <picture>
+              <source srcset="./assets/images/common/page-about_policy_pc.jpg" media="(min-width: 768px)">
+              <img src="./assets/images/common/page-about_policy_sp.jpg" alt="歯科衛生士が患者の歯を治療している様子">
+            </picture>
+          </div>
+        </div>
+        <div class="page-about__item page-about__item--second">
+          <div class="page-about__content page-about__content--second">
+            <p class="page-about__features">FEATURE</p>
+            <h3 class="page-about__sub-title">「医療技術の追求」と<br>「通いやすさ」</h3>
+            <p class="page-about__lead">歯の治療において、小さな違和感は大きなストレスにつながります。私たちは常に快適な歯科医療技術の研究を行っております。<br>
+            また、「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。<br>
+            
+            朝から夜までお仕事をされている方のために診療時間を見直し、平日でもご利用いただけるようにいたしました。</p>
+          </div>
+          <div class="page-about__image page-about__image--second">
+            <picture>
+              <source srcset="./assets/images/common/page-about_feature_pc.jpg" media="(min-width: 768px)">
+              <img src="./assets/images/common/page-about_feature_sp.jpg" alt="歯科衛生士が患者の歯を治療している様子">
+            </picture>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+<!-- Page-about
+    <section class="page-about layout-page-about about">
+      <div class="page-about__inner about__inner inner">
+        <div class="about__content">
+          <p class="about__section-title">POLICY</p>
+          <h2 class="about__title">コミュニケーションから始まる最適な医療提供<br>
+            街づくりを目指して</h2>
+          <p class="about__lead">当院ではまず患者様から詳しくお話を伺います。<br>
+          難しい言葉は使わず、実際に感じている小さな違和感からあらゆる可能性を考え、最適な治療方法をご提案いたします。<br>
+          「どこよりも本音で話せる歯医者さん」を目指し、スタッフ一同、「人間力の向上」にも勤めております。</p>
+        </div>
+        <div class="about__image">
+          <picture>
+            <source srcset="./assets/images/common/page-about_policy_pc.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/common/page-about_policy_sp.jpg" alt="女性患者にレントゲン写真を見ながら歯の治療について説明している男性医師">
+          </picture>
+        </div>
+        <div class="about__bg"></div> -->
+        <!-- <div class="about__content">
+          <p class="about__section-title">FEATURE</p>
+          <h2 class="about__title">「医療技術の追求」と<br>
+          「通いやすさ」</h2>
+          <p class="about__lead">歯の治療において、小さな違和感は大きなストレスにつながります。私たちは常に快適な歯科医療技術の研究を行っております。<br>
+          また、「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。<br>
+          
+          朝から夜までお仕事をされている方のために診療時間を見直し、平日でもご利用いただけるようにいたしました。</p>
+        </div>
+        <div class="about__image">
+          <picture>
+            <source srcset="./assets/images/common/page-about_feature_pc.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/common/page-about_feature_sp.jpg" alt="エレベーターの目の前にあるみなみ歯科クリニックの受付">
+          </picture>
+        </div> -->
+      <!-- </div>
+    </section> -->
+
+    <section class="gallery layout-gallery">
+      <div class="gallery__inner inner">
+        <div class="gallery__title">
+          <h2 class="section-title">院内の様子</h2>
+        </div>
+        <div class="gallery__content">
+          <picture>
+            <source srcset="./assets/images/common/gallery-img1_pc.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/common/gallery-img1_sp.jpg" alt="エレベーターの目の前にあるみなみ歯科クリニックの受付">
+          </picture>
+          <picture>
+            <source srcset="./assets/images/common/gallery-img2_pc.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/common/gallery-img2_sp.jpg" alt="エレベーターの目の前にあるみなみ歯科クリニックの受付">
+          </picture>
+          <picture>
+            <source srcset="./assets/images/common/gallery-img3_pc.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/common/gallery-img3_sp.jpg" alt="エレベーターの目の前にあるみなみ歯科クリニックの受付">
+          </picture>
+          <picture>
+            <source srcset="./assets/images/common/gallery-img4_pc.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/common/gallery-img4_sp.jpg" alt="エレベーターの目の前にあるみなみ歯科クリニックの受付">
+          </picture>
+          <picture>
+            <source srcset="./assets/images/common/gallery-img5_pc.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/common/gallery-img5_sp.jpg" alt="エレベーターの目の前にあるみなみ歯科クリニックの受付">
+          </picture>
+          <picture>
+            <source srcset="./assets/images/common/gallery-img6_pc.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/common/gallery-img6_sp.jpg" alt="エレベーターの目の前にあるみなみ歯科クリニックの受付">
+          </picture>
+        </div>
+      </div>
+    </section>
+<!-- To-Top -->
+  <div id="to-top" class="to-top">
+    <a href="#"><span></span></a>
+  </div>
+<!-- Footer -->
+  <footer class="footer layout-footer">
+    <div class="footer__bg-deco"></div>
+    <div class="footer__inner inner">
+      <div class="footer__information">
+        <div class="footer__contents">
+          <h2 class="footer__logo">
+            <a class="footer__logo-link" href="index.html">
+              <img class="footer__logo-img" src="./assets/images/common/header-icon_dental.png" alt="笑顔の歯のイラスト">
+              <img class="footer__logo-title" src="./assets/images/common/header_logo.png" alt="みなみ歯科クリニックのロゴ画像">
+            </a>
+          </h2>
+          <div class="footer__address">
+            <span>〒166-0001</span><p>東京都杉並区阿佐谷北7-3-1</p> 
+          </div>
+          <div class="footer__tel">
+            <img src="./assets/images/common/header-icon_tel.png" alt="電話のアイコン">
+            <a href="tel:03-1234-5678">03-1234-5678</a>
+            <p class="footer__tel-reception">(年中無休 AM9:00〜PM22:00)</p>
+          </div>
+          <div class="footer__button">
+            <a href="#" class="button-contact button-contact--web"><span></span>WEB予約</a>
+            <a href="#" class="button-contact"><span></span>お問い合わせ</a>
+          </div>
+          <div class="footer__medical-time">
+            <img src="./assets/images/common/fv-medical-time.png" alt="診療時間の案内表">
+          </div>
+        </div>
+        <div class="footer__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12958.51748481736!2d139.62593069282278!3d35.71073713259751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ed89400bb025%3A0xe163fbc6ba8a0d1c!2z44CSMTY2LTAwMDEg5p2x5Lqs6YO95p2J5Lim5Yy66Zi_5L2Q6LC35YyX!5e0!3m2!1sja!2sjp!4v1708456483336!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="footer__sitemap">
+        <div class="footer__sitemap-inner">
+          <ul class="footer__sitemap-list">
+            <li class="footer__sitemap-item">
+              <a href="#" class="footer__sitemap-title">TOP</a>
+            </li>
+            <li class="footer__sitemap-item">
+              <a href="#" class="footer__sitemap-title">当院について</a>
+              <ul class="footer__sitemap-contents">
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>ポリシーと特徴</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>当院の様子</p></a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__sitemap-item">
+              <a href="#" class="footer__sitemap-title">スタッフ紹介</a>
+              <ul class="footer__sitemap-contents">
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>院長のあいさつ</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>スタッフ</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>スタッフブログ</p></a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__sitemap-item">
+              <a href="#" class="footer__sitemap-title">診療内容</a>
+              <ul class="footer__sitemap-contents">
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>一般歯科</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>小児歯科</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>予防歯科</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>入れ歯</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>矯正歯科</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>ホワイトニング</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>口腔外科</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>レーザー治療</p></a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__sitemap-item">
+              <a href="#" class="footer__sitemap-title">お問い合わせ</a>
+              <ul class="footer__sitemap-contents">
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>お問い合わせフォーム</p></a>
+                </li>
+                <li class="footer__sitemap-content">
+                  <a class="footer__sitemap-content-link" href="#"><span></span><p>WEB予約</p></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <small>&copy;2020-2021 みなみ歯科クリニック</small>
+    </div>
+  </footer>
+</body>
+
+</html>

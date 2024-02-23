@@ -1,0 +1,92 @@
+@use 'global' as *;
+
+.sub-fv {
+  position: relative;
+}
+
+.sub-fv__inner {
+  padding-top: rem(20);
+  padding-left: rem(20);
+  padding-right: rem(20);
+  position: relative;
+  @include mq('md') {
+    padding-top: rem(40);
+    padding-left: rem(60);
+    padding-right: rem(60);
+  }
+}
+
+.sub-fv__image {
+  border-radius: 12px;
+  position: relative;
+}
+
+.sub-fv__image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.sub-fv__image img {
+  aspect-ratio: 335 / 188;
+  border-radius: 12px;
+  @include mq('md') {
+    aspect-ratio: 1160 / 340;
+  }
+}
+
+.sub-fv__body {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub-fv__title {
+  color: $white;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.2em;
+  @include mq('md') {
+    font-size: rem(32);
+    letter-spacing: 0.1em;
+  }
+}
+
+.sub-fv__lead {
+  margin-top: rem(14);
+  color: $white;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(12);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.1em;
+  @include mq('md') {
+    margin-top: rem(17);
+    font-size: rem(14);
+  }
+}
+
+.sub-fv__button {
+  display: none;
+  @include mq('md') {
+    display: block;
+    position: absolute;
+    top: rem(176);
+    right: 0;
+    width: rem(92);
+    height: rem(120);
+    z-index: 1;
+  }
+}
+
+

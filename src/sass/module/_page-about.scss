@@ -1,11 +1,19 @@
 @use 'global' as *;
 
-.concept {
+.page-about {
   position: relative;
   overflow: hidden;
 }
 
-.concept__inner {
+.page-about__title {
+  text-align: center;
+}
+
+.page-about__inner {
+  padding-top: rem(148);
+}
+
+.page-about__item {
   @include mq('md') {
     display: flex;
     flex-direction: row-reverse;
@@ -13,14 +21,28 @@
   }
 }
 
-.concept__content {
+.page-about__item.page-about__item--second {
+  margin-top: rem(100);
+  @include mq('md') {
+    margin-top: rem(120);
+    flex-direction: initial;
+  }
+}
+
+.page-about__content {
   @include mq('md') {
     margin-left: rem(95);
     width: 80%;
   }
 }
 
-.concept__section-title {
+.page-about__content.page-about__content--second {
+  @include mq('md') {
+    margin-left: 0;
+  }
+}
+
+.page-about__features {
   color: $main;
   text-align: left;
   font-family: $base-font-family;
@@ -34,7 +56,7 @@
   }
 }
 
-.concept__title {
+.page-about__sub-title {
   margin-top: rem(14);
   color: $black;
   font-family: $base-font-family;
@@ -47,11 +69,10 @@
     margin-top: rem(24);
     font-size: rem(28);
     line-height: calc(44 / 28);
-    white-space: nowrap;
   }
 }
 
-.concept__lead {
+.page-about__lead {
   margin-top: rem(27);
   color: $black;
   font-family: $base-font-family;
@@ -64,15 +85,7 @@
   }
 }
 
-.concept__button {
-  margin-top: rem(37);
-  text-align: center;
-  @include mq('md') {
-    text-align: left;
-  }
-}
-
-.concept__image {
+.page-about__image {
   margin-top: rem(41);
   margin-left: calc(50% - 50vw);
   margin-right: rem(20);
@@ -82,21 +95,33 @@
   }
 }
 
-.concept__image img {
+.page-about__image.page-about__image--second {
+  margin-right: calc(50% - 50vw);
+  margin-left: rem(20);
+  @include mq('md') {
+    margin-left: rem(95);
+  }
+}
+
+.page-about__image img {
   aspect-ratio: 334 / 230;
-  border-radius: 0 rem(20) rem(20) 0;
+  border-radius: 0 rem(20) rem(20) rem(20);
   @include mq('md') {
     aspect-ratio: 640 / 438;
   }
 }
 
-.concept__bg {
+.page-about__image.page-about__image--second img {
+  border-radius: rem(20) 0 rem(20) rem(20);
+}
+
+.page-about__bg {
   position: absolute;
   top: 27%;
   left: calc(50% - min(48vw, 11.5rem));
   width: 150%;
   height: rem(308);
-  background-image: url(../images/common/concept-bg_sp.png);
+  background-image: url(../images/common/about-bg_sp.png);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -105,7 +130,6 @@
     left: calc(50% - min(48vw, 13.5rem));
     width: rem(1726);
     height: 80%;
-    background-image: url(../images/common/concept-bg_pc.png);
+    background-image: url(../images/common/about-bg_pc.png);
   }
 }
-

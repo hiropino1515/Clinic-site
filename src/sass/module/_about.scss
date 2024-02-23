@@ -1,0 +1,111 @@
+@use 'global' as *;
+
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.about__inner {
+  @include mq('md') {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+.about__content {
+  @include mq('md') {
+    margin-left: rem(95);
+    width: 80%;
+  }
+}
+
+.about__section-title {
+  color: $main;
+  text-align: left;
+  font-family: $base-font-family;
+  font-size: rem(11);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.1em;
+  @include mq('md') {
+    font-size: rem(14);
+  }
+}
+
+.about__title {
+  margin-top: rem(14);
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: calc(32 / 20);
+  letter-spacing: 0.08em;
+  @include mq('md') {
+    margin-top: rem(24);
+    font-size: rem(28);
+    line-height: calc(44 / 28);
+    white-space: nowrap;
+  }
+}
+
+.about__lead {
+  margin-top: rem(27);
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+  @include mq('md') {
+    margin-top: rem(36);
+  }
+}
+
+.about__button {
+  margin-top: rem(37);
+  text-align: center;
+  @include mq('md') {
+    text-align: left;
+  }
+}
+
+.about__image {
+  margin-top: rem(41);
+  margin-left: calc(50% - 50vw);
+  margin-right: rem(20);
+  @include mq('md') {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+.about__image img {
+  aspect-ratio: 334 / 230;
+  border-radius: 0 rem(20) rem(20) 0;
+  @include mq('md') {
+    aspect-ratio: 640 / 438;
+  }
+}
+
+.about__bg {
+  position: absolute;
+  top: 27%;
+  left: calc(50% - min(48vw, 11.5rem));
+  width: 150%;
+  height: rem(308);
+  background-image: url(../images/common/about-bg_sp.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  @include mq('md') {
+    top: 20%;
+    left: calc(50% - min(48vw, 13.5rem));
+    width: rem(1726);
+    height: 80%;
+    background-image: url(../images/common/about-bg_pc.png);
+  }
+}
+
