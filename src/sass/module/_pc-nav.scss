@@ -34,7 +34,7 @@
   left: 30%;
   /*線の形状*/
   width: rem(20);
-  height: 1px;
+  height: 2px;
   background: $main;
   /*アニメーションの指定*/
   transition: all .3s;
@@ -69,10 +69,87 @@
   }
 }
 
-.pc-nav__item-icon {
+.pc-nav__icon-home {
+  width: rem(18);
+  height: rem(20);
+  background-image: url(../images/common/header-icon_home.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
+  position: relative;
+}
+.pc-nav__item-link:hover .pc-nav__icon-home {
+  background-image: url(../images/common/header-icon_home_blue.svg);
+}
+
+.pc-nav__icon-clinic {
   width: rem(24);
   height: rem(24);
+  background-image: url(../images/common/header-icon_clinic.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
   position: relative;
+}
+
+.pc-nav__item-link:hover .pc-nav__icon-clinic {
+  background-image: url(../images/common/header-icon_clinic_blue.svg);
+}
+
+.pc-nav__icon-file-text {
+  width: rem(24);
+  height: rem(24);
+  background-image: url(../images/common/header-icon_file-text.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.pc-nav__item-link:hover .pc-nav__icon-file-text {
+  background-image: url(../images/common/header-icon_file-text_blue.svg);
+}
+
+.pc-nav__icon-people {
+  width: rem(24);
+  height: rem(24);
+  background-image: url(../images/common/header-icon_people.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.pc-nav__item-link:hover .pc-nav__icon-people {
+  background-image: url(../images/common/header-icon_people_blue.svg);
+}
+
+.pc-nav__icon-edit {
+  width: rem(24);
+  height: rem(24);
+  background-image: url(../images/common/header-icon_edit.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.pc-nav__item-link:hover .pc-nav__icon-edit {
+  background-image: url(../images/common/header-icon_edit_blue.svg);
+}
+
+.pc-nav__icon-email {
+  width: rem(24);
+  height: rem(24);
+  background-image: url(../images/common/header-icon_email.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.pc-nav__item-link:hover .pc-nav__icon-email {
+  background-image: url(../images/common/header-icon_email_blue.svg);
 }
 
 .pc-nav__item-title {
@@ -119,4 +196,8 @@
   line-height: normal;
   letter-spacing: 0.01em;
   white-space: nowrap;
+}
+
+.pc-nav__item-tel a:hover {
+  opacity: 0.7;
 }
