@@ -66,4 +66,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
+  // director__swiper
+  const swiper = new Swiper('.director__swiper', {
+    loop: true,
+    slidesPerView: "auto",
+    autoplay: {
+        delay: 0,
+    },
+    speed: 3000,
+
+    spaceBetween: 10,
+    breakpoints: {
+      768: {
+        spaceBetween: 20,
+      },
+    },
+  })
+
 });

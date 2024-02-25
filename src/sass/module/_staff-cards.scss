@@ -1,0 +1,16 @@
+@use 'global' as *;
+
+.staff-cards {
+  @include mq('md') {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(80);
+    row-gap: rem(60);
+  }
+}
+
+.staff-cards__item {
+  @include mq('md') {
+    max-width: rem(280);
+  }
+}

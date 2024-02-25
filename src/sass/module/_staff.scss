@@ -1,0 +1,48 @@
+@use 'global' as *;
+
+.staff {
+
+}
+
+.staff__inner {
+
+}
+
+.staff__title {
+  text-align: center;
+}
+
+.staff__contents {
+  margin-top: rem(36);
+  @include mq('md') {
+    margin-top: rem(60);
+  }
+}
+
+.staff__contents-title {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.08em;
+}
+
+.staff__contents-list {
+  margin-top: rem(7);
+  padding-top: rem(36);
+  border-top: 1px solid #707070;
+  @include mq('md') {
+    margin-top: rem(6);
+    padding-top: rem(40);
+  }
+}
+
+.staff__contents-item + .staff__contents-item {
+  margin-top: rem(56);
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+
