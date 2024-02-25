@@ -1,19 +1,11 @@
 @use 'global' as *;
 
-.gallery {
-
-}
-
-.gallery__inner {
-
-}
-
 .gallery__title {
   text-align: center;
 }
 
 .gallery__content {
-  margin-top: rem(40);
+  margin-top: rem(38);
   display: grid;
   grid-template-columns: repeat(2 , 1fr);
   column-gap: rem(11);

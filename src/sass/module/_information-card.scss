@@ -1,0 +1,131 @@
+@use 'global' as *;
+
+.information-card {
+  border-radius: rem(20);
+  background: $white;
+}
+
+.information-card__link {
+  position: relative;
+  padding: rem(4) rem(20) rem(20);
+  display: inline-block;
+  @include mq('md') {
+    padding: rem(60);
+  }
+}
+
+.information-card__subtitle {
+  padding-top: rem(14);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: rem(20);
+  width: rem(80);
+  height: rem(60);
+  color: $white;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.08em;
+  background-image: url(../images/common/page-information-card_subtitle-bg_blue_sp.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq('md') {
+    padding-top: rem(24);
+    width: rem(100);
+    height: rem(80);
+    font-size: rem(16);
+    background-image: url(../images/common/page-information-card_subtitle-bg_blue_pc.svg);
+  }
+}
+
+.information-card__subtitle.information-card__subtitle--red {
+  background-image: url(../images/common/page-information-card_subtitle-bg_red_sp.svg);
+  @include mq('md') {
+    background-image: url(../images/common/page-information-card_subtitle-bg_red_pc.svg);
+  }
+}
+
+
+
+.information-card__header {
+  @include mq('md') {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.information-card__title {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: calc(28 / 10);
+  letter-spacing: 0.08em;
+  @include mq('md') {
+    font-size: rem(28);
+  }
+}
+
+.information-card__lead {
+  margin-top: rem(6);
+  color: $main;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.08em;
+  @include mq('md') {
+    margin-top: 0;
+    margin-left: rem(40);
+  }
+}
+
+.information-card__body {
+  margin-top: rem(20);
+  padding-top: rem(16);
+  border-top: 1px solid #C2C2C2;
+  @include mq('md') {
+    margin-top: rem(36);
+    padding-top: rem(36);
+    display: flex;
+  }
+}
+
+.information-card__body-text {
+  @include mq('md') {
+    width: 47.727%;
+  }
+}
+
+.information-card__body-text p {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+}
+
+.information-card__body-image {
+  margin-top: rem(16);
+  border-radius: rem(20);
+  @include mq('md') {
+    margin-top: 0;
+    margin-left: rem(40);
+    width: 47.727%;
+  }
+}
+
+.information-card__body-image img {
+  aspect-ratio: 295 / 221;
+  @include mq('md') {
+    aspect-ratio: 420 / 315;
+  }
+}
+

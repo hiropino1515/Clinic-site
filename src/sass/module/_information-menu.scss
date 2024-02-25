@@ -1,0 +1,98 @@
+@use 'global' as *;
+
+.information-menu__inner.inner {
+  @include mq('md') {
+    padding-left: rem(60);
+    padding-right: rem(60);
+    max-width: none;
+  }
+}
+
+.information-menu__wrapper + .information-menu__wrapper {
+  margin-top: rem(80);
+}
+
+.information-menu__header {
+  display: flex;
+  align-items: center;
+}
+
+.information-menu__title {
+  color: $black;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.08em;
+  @include mq('md') {
+    font-size: rem(28);
+  }
+}
+
+.information-menu__subtitle {
+  margin-left: rem(24);
+  display: inline-block;
+  padding: rem(7) rem(12);
+  color: $white;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.08em;
+  border-radius: rem(24);
+  background: $main;
+}
+
+.information-menu__subtitle.information-menu__subtitle--second {
+  background: $accent;
+}
+
+.information-menu__list {
+  margin-top: rem(32);
+  @include mq('md') {
+    margin-top: rem(29);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: rem(16);
+    row-gap: rem(16);
+  }
+}
+
+.information-menu__item + .information-menu__item {
+  margin-top: rem(14);
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+
+.information-menu__link {
+  display: block;
+  padding: rem(15) 0;
+  color: $main;
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+  letter-spacing: 0.08em;
+  border-radius: rem(12);
+  border: 1px solid $main;
+  background: $white;
+  transition: all 0.3s;
+  @include mq('md') {
+    font-size: rem(24);
+    padding: rem(17) rem(32);
+    white-space: nowrap;
+  }
+}
+
+.information-menu__link:hover {
+  background: $sub-2;
+}
+

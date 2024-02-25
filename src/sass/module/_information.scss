@@ -70,8 +70,6 @@
   }
 }
 
-
-
 .information__bg {
   background-color: $sub-2;
 }
@@ -98,11 +96,24 @@
   }
 }
 
+.information__list.information__list--page-information {
+  @include mq('md') {
+    display: block;
+  }
+}
+
 .information__item + .information__item:not(:first-child) {
   margin-top: rem(20);
   @include mq('md') {
     margin-top: 0;
     margin-left: rem(80);
+  }
+}
+
+.information__item.information__item--page-information + .information__item.information__item--page-information:not(:first-child) {
+  margin-top: rem(44);
+  @include mq('md') {
+    margin-left: 0;
   }
 }
 
