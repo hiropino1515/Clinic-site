@@ -41,14 +41,20 @@
   }
 }
 
-.wp-pagenavi {
+.archive__pagenavi--single {
+  margin-top: rem(42);
+  @include mq('md') {
+    margin-top: rem(72);
+  }
+}
 
+.wp-pagenavi {
+  white-space: nowrap;
 }
 
 .page {
   display: inline-block;
-  width: rem(30);
-  padding: rem(6) rem(4) rem(6);
+  padding: rem(6) rem(11) rem(6);
   border-radius: rem(4);
   border: 1px solid $main;
   color: $main;
@@ -61,8 +67,7 @@
   line-height: 1;
   transition: all 0.3s;
   @include mq('md') {
-    width: rem(34);
-    padding: rem(7) rem(4) rem(7);
+    padding: rem(7) rem(12) rem(7);
     line-height: normal;
   }
 }
@@ -79,10 +84,18 @@
   }
 }
 
+.page.page--single {
+  margin-left: rem(12);
+  padding: rem(10) rem(18) rem(10) rem(18);
+  @include mq('md') {
+    margin-left: rem(20);
+    padding: rem(10) rem(17);
+  }
+}
+
 .current {
   display: inline-block;
-  width: rem(30);
-  padding: rem(6) rem(4) rem(6);
+  padding: rem(6) rem(11) rem(6);
   border-radius: rem(4);
   border: 1px solid $main;
   color: $white;
@@ -94,14 +107,13 @@
   font-weight: $normal;
   line-height: 1;
   @include mq('md') {
-    width: rem(34);
+    padding: rem(7) rem(12) rem(7);
     line-height: normal;
   }
 }
 
 .previouspostslink {
   display: inline-block;
-  width: rem(82);
   padding: rem(7) rem(15) rem(7) rem(37);
   border-radius: rem(4);
   border: 1px solid $main;
@@ -116,6 +128,13 @@
   position: relative;
   @include mq('md') {
     line-height: normal;
+  }
+}
+
+.previouspostslink.previouspostslink--single {
+  padding: rem(9) rem(15) rem(9) rem(34);
+  @include mq('md') {
+    padding: rem(7) rem(16) rem(8) rem(34);
   }
 }
 
@@ -139,7 +158,6 @@
 
 .nextpostslink {
   display: inline-block;
-  width: rem(82);
   padding: rem(7) rem(37) rem(7) rem(15);
   border-radius: rem(4);
   border: 1px solid $main;
@@ -154,6 +172,15 @@
   position: relative;
   @include mq('md') {
     line-height: normal;
+  }
+}
+
+.nextpostslink.nextpostslink--single {
+  margin-left: rem(12);
+  padding: rem(9) rem(37) rem(9) rem(15);
+  @include mq('md') {
+    margin-left: rem(20);
+    padding: rem(7) rem(38) rem(8) rem(16);
   }
 }
 

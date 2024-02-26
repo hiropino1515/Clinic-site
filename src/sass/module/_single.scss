@@ -1,0 +1,215 @@
+@use 'global' as *;
+
+.single {
+
+}
+
+.single__title {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: calc(32 / 20);
+  letter-spacing: 0.08em;
+  @include mq('md') {
+    font-size: rem(28);
+    line-height: calc(40 / 28);
+  }
+}
+
+.single__header {
+  margin-top: rem(16);
+  display: flex;
+    align-items: center;
+  @include mq('md') {
+    margin-top: rem(20);
+  }
+}
+
+.single__date {
+  padding-left: rem(20);
+  color: $main;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+  position: relative;
+}
+
+.single__date::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: rem(14);
+  height: rem(14);
+  background-image: url(../images/common/single_time_icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.single__category {
+  margin-left: rem(32);
+  padding: rem(6) rem(12);
+  color: $white;
+  background-color: $main;
+  border-radius: rem(12);
+  font-family: $base-font-family;
+  font-size: rem(11);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.single__content {
+  margin-top: rem(56);
+  @include mq('md') {
+    margin-top: rem(48);
+  }
+
+  p {
+    color: $black;
+    font-family: $base-font-family;
+    font-size: rem(14);
+    font-style: normal;
+    font-weight: $normal;
+    line-height: calc(24 / 14);
+  }
+
+  p:not(:first-child) {
+    margin-top: rem(20);
+    @include mq('md') {
+      margin-top: rem(20);
+    }
+  }
+
+  a {
+    color: $main;
+    font-family: $base-font-family;
+    font-size: rem(14);
+    font-style: normal;
+    font-weight: $normal;
+    line-height: calc(24 / 14);
+    text-decoration-line: underline;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+
+  h2 {
+    margin-top: rem(63);
+    padding-left: rem(22);
+    color: $main;
+    font-family: $base-font-family;
+    font-size: rem(18);
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    letter-spacing: 0.08em;
+    position: relative;
+    @include mq('md') {
+      margin-top: rem(68);
+      padding-left: rem(28);
+      font-size: rem(24);
+    }
+  }
+
+  h2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: rem(6);
+    height: rem(40);
+    background-color: $main;
+    @include mq('md') {
+      width: rem(8);
+      height: rem(52);
+    }
+  }
+
+  img {
+    margin-top: rem(26);
+    aspect-ratio: 335 / 209;
+    background: #F2F2F2;
+    @include mq('md') {
+      margin-top: rem(28);
+      aspect-ratio: 670 / 419;
+    }
+  }
+
+  h3 {
+    margin-top: rem(40);
+    padding-bottom: rem(4);
+    border-bottom: 1px solid $main;
+    color: $main;
+    font-family: $base-font-family;
+    font-size: rem(16);
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    letter-spacing: 0.08em;
+    @include mq('md') {
+      padding-bottom: rem(5);
+      font-size: rem(20);
+    }
+  }
+
+  h4 {
+    margin-top: rem(56);
+    color: $main;
+    font-family: $base-font-family;
+    font-size: rem(14);
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    letter-spacing: 0.08em;
+    @include mq('md') {
+      margin-top: rem(60);
+      font-size: rem(16);
+    }
+  }
+
+  ul {
+    margin-top: rem(16);
+    padding-left: rem(14);
+    @include mq('md') {
+      margin-top: rem(32);
+    }
+  }
+
+  li {
+    padding-left: rem(14);
+    color: $black;
+    font-family: $base-font-family;
+    font-size: rem(16);
+    font-style: normal;
+    font-weight: $normal;
+    line-height: calc(30 / 16);
+    position: relative;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(8);
+    width: rem(2);
+    height: rem(2);
+    background-image: url(../images/common/single_list-dot.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include mq('md') {
+      left: 0;
+      width: rem(5);
+      height: rem(5);
+    }
+  }
+}
+
