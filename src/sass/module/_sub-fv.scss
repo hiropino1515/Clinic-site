@@ -54,6 +54,7 @@
   font-weight: $bold;
   line-height: normal;
   letter-spacing: 0.2em;
+  white-space: nowrap;
   @include mq('md') {
     font-size: rem(32);
     letter-spacing: 0.1em;

@@ -7,11 +7,14 @@
   }
   
   .swiper-wrapper {
-  
+    transition-timing-function: linear;
   }
-  
+
   .swiper-slide {
-  
+    width: rem(200);
+    @include mq('md') {
+      width: rem(305);
+    }
   }
   
 }
@@ -181,11 +184,9 @@
 }
 
 .director__swiper img {
-  width: rem(200);
-  height: rem(150);
+  aspect-ratio: 200 / 150;
   @include mq('md') {
-    width: rem(305);
-    height: rem(229);
+    aspect-ratio: 305 / 229;
   }
 }
 

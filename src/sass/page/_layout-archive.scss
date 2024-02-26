@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.layout-archive {
+  margin-top: rem(68);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
