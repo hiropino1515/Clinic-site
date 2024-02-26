@@ -59,11 +59,17 @@
   font-style: normal;
   font-weight: $normal;
   line-height: 1;
+  transition: all 0.3s;
   @include mq('md') {
     width: rem(34);
     padding: rem(7) rem(4) rem(7);
     line-height: normal;
   }
+}
+
+.page:hover {
+  background-color: $main;
+  color: $white;
 }
 
 .page.page--pc {
@@ -124,6 +130,11 @@
   background-image: url(../images/common/pagenavi_arrow-circle_left.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  transition: all 0.3s;
+}
+
+.previouspostslink:hover span {
+  left: rem(8);
 }
 
 .nextpostslink {
@@ -157,6 +168,11 @@
   background-image: url(../images/common/pagenavi_arrow-circle_right.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  transition: all 0.3s;
+}
+
+.nextpostslink:hover span {
+  right: rem(8);
 }
 
 .archive__sidebar {
