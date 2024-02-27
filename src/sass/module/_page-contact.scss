@@ -1,0 +1,46 @@
+@use 'global' as *;
+
+.page-contact {
+
+}
+
+.page-contact__inner.inner {
+  max-width: rem(488);
+  @include mq('md') {
+    max-width: rem(780);
+  }
+}
+
+.page-contact__lead {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+}
+
+.page-contact__lead span {
+  color: $accent;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: calc(24 / 14);
+}
+
+.page-contact__title {
+  margin-top: rem(100);
+  text-align: center;
+  @include mq('md') {
+    margin-top: rem(150);
+  }
+}
+
+.page-contact__form {
+  margin-top: rem(66);
+  @include mq('md') {
+    margin-top: rem(70);
+  }
+}
+
