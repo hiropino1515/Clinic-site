@@ -67,7 +67,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // director__swiper
-  const swiper = new Swiper('.director__swiper', {
+  const newSwiper = new Swiper('.director__swiper', {
     loop: true,
     slidesPerView: "auto",
     autoplay: {
@@ -83,4 +83,87 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },
   });
 
-});
+  // ContactForm
+  $(function() {
+    // 全てのアラート文を非表示にする
+    $(".alert").hide();
+
+      $("#submitBtn").click(function() {
+        // チェック用の変数sendFlag
+        var sendFlag = true;
+
+        // textフィールドのチェック
+        if(!$("#text").val()){
+          $("#textSection .alert").show();
+          sendFlag = false;
+        }else{
+          $("#textSection .alert").hide();
+        }
+
+        // textフィールドのチェック
+        if(!$("#text").val()){
+          $("#textSection2 .alert").show();
+          sendFlag = false;
+        }else{
+          $("#textSection .alert").hide();
+        }
+
+        // telフィールドのチェック
+        if(!$("#tel").val()){
+          $("#telSection .alert").show();
+          sendFlag = false;
+        }else{
+          $("#telSection .alert").hide();
+        }
+
+        // emailフィールドのチェック
+        if(!$("#email").val()){
+          $("#emailSection .alert").show();
+          sendFlag = false;
+        }else{
+          $("#emailSection .alert").hide();
+        }
+
+        // ラジオボタンのチェック
+        var radioChk = $('input[name="radio"]:checked').length;
+        if(radioChk == 0) {
+          $("#radioSection .alert").show;
+          sendFlag = false;
+        }else{
+          $("#radioSection .alert").hide();
+        }
+
+        // チェックボックスのチェック
+        var checkboxChk = $('input[name=checkbox]:checked').length;
+        if(checkboxChk < 3){
+          $("#checkSection .alert").show;
+          sendFlag = false;
+        }else{
+          $("#checkSection .alert").hide();
+        }
+
+        // セレクトボックスのチェック
+        if($("select").val() == "none") {
+          $("#selectSection .alert").show();
+          sendFlag = false;
+        }else{
+          $("#selectSection .alert").hide();
+        }
+
+        // 複数行入力フィールドのチェック
+        if(!$("#textarea").val()) {
+          $("#textareaSection .alert").show();
+          sendFlag = false;
+        }else{
+          $("#textareaSection .alert").hide();
+        }
+
+        // 変数sendFlagの値をチェック
+        if(sendFlag == false){
+          return false;
+        }
+
+      });
+    });
+  });
+

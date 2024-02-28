@@ -23,6 +23,26 @@ $padding-und-btn: rem(11);//paddingの指定（上下） btnの内側の余白�
 $padding-lnr-btn: rem(114);//paddingの指定（左右） btnの内側の余白で使う
 $border-r-btn: rem(24);
 
+/*ラジオボタンの指定*/
+$radio-fz: rem(14);//フォントサイズ
+$radio-size: rem(24);//外枠の幅高さ
+$radio-bg-cr: #fff;//外枠の背景色
+$radio-border-cr: $main;//外枠の色
+$radio-size-inner: rem(12);//チェックマーク幅高さ
+$radio-bg-cr-inner: $main;//チェックマークの背景色
+$radio-space: rem(8);//チェックマークと文字の距離
+$radio-space-betweenRadio: rem(35);//ラジオボタンの間の距離
+
+/*チェックボックスの指定*/
+$check-fz: rem(14);//フォントサイズ
+$check-size: rem(24);//外枠の幅高さ
+$check-bg-cr: #fff;//外枠の背景色
+$check-border-cr: $main;//外枠の色
+$check-bg-cr-inner: $main;//チェックマークの背景色
+$check-space: rem(8);//チェックマークと文字の距離
+$check-space-betweenRadio: 0;//チェックボックスの間の距離
+$check-weight: 2px;//チェックマークの線の太さ(px)
+
 /*テキストエリアの指定*/
 $textarea-height-sp: rem(160);
 $textarea-height-pc: rem(200);
@@ -30,6 +50,7 @@ $textarea-height-pc: rem(200);
 [type="text"],
 [type="tel"],
 [type="email"],
+[type="date"],
 textarea {
 	/*↓リセットCSS */
 	border: none;
@@ -83,7 +104,174 @@ button,
     padding: rem(18) rem(154);
     font-size: rem(16);
   }
+
+	&:hover {
+		color: $white;
+		background: $main;
+	}
+
 }
+
+
+[type="radio"] {
+	display: none;
+
+	+ span {
+		display: inline-block;
+		position: relative;
+		padding: 0 0 0 calc($radio-size + $radio-space);
+		margin: 0 $radio-space-betweenRadio 0 0;
+		font-size: $radio-fz;
+		line-height: 1;
+		cursor: pointer;
+		@include mq('md') {
+			margin: 0 rem(28) 0 0;
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			background: $radio-bg-cr;
+			border: 1px solid $radio-border-cr;
+			border-radius: 50%;
+			width: $radio-size;
+			height: $radio-size;
+			display: block;
+		}
+
+		&::after {
+			opacity: 0;
+			transition: 0.3s ease;
+		}
+	}
+
+	&:checked + span {
+		&::after {
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: calc(($radio-size - $radio-size-inner) / 2);
+			transform: translateY(-50%);
+			background: $radio-bg-cr-inner;
+			border-radius: 50%;
+			width: $radio-size-inner;
+			height: $radio-size-inner;
+			display: block;
+			opacity: 1;
+		}
+	}
+}
+
+[type="checkbox"] {
+	display: none;
+
+	+ span {
+		display: inline-block;
+		position: relative;
+		padding: 0 0 0 calc($check-size + $check-space);
+		margin: 0 $check-space-betweenRadio 0 0;
+		font-size: $check-fz;
+		line-height: 1;
+		cursor: pointer;
+		transition: 0.3s ease;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			background: $check-bg-cr;
+			border: 1px solid $check-border-cr;
+			width: $check-size;
+			height: $check-size;
+			display: block;
+		}
+
+		&::after {
+			opacity: 0;
+			transition: 0.3s ease;
+		}
+	}
+
+	&:checked + span {
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			display: block;
+			opacity: 1;
+			/*チェックマークじゃない場合は以下を変更する*/
+			transform: translateY(-50%) rotate(-45deg);
+			width: calc($check-size * 0.483);
+			height: calc($check-size * 0.265);
+			margin-top: -0.1em;
+			margin-left: 0.4em;
+			border-left: $check-weight solid $check-bg-cr-inner;
+			border-bottom: $check-weight solid $check-bg-cr-inner;
+
+		}
+	}
+
+}
+
+select {
+	/*↓リセットCSS */
+	border-radius: 0;
+	font-family: inherit;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	/*↓カスタム */
+  margin-top: rem(10);
+	font-size: $fz;
+	padding: $padding-und $padding-lnr;
+	background-color: $back-cr;
+  border: 1px solid $border-cr-default;
+  border-radius: $border-r;
+	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
+	appearance: none;
+	/*↓デフォルトではないアイコンを使う場合は入力する*/
+	background-image: url(../images/common/form_select-arrow.svg);
+	background-position: right 12px center;
+	background-repeat: no-repeat;
+	@include mq('md') {
+		margin-top: 0;
+	}
+	&:focus {
+		border: 1px solid $border-cr;
+	}
+}
+
+[type="date"] {
+	position: relative;
+	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
+	appearance: none;
+	/*↓デフォルトではないアイコンを使う場合は入力する*/
+	background-image: url(../images/common/form_date-calendar.svg);
+	background-position: right 12px center;
+	background-repeat: no-repeat;
+	&:focus {
+		border-color: 1px solid $border-cr;
+	}
+}
+
+[type="date"]:nth-of-type(n + 2) {
+	margin-top: rem(16);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
 
 textarea {
 	height: $textarea-height-sp;
@@ -119,6 +307,18 @@ form {
   }
 }
 
+.form__item + .form__item--check {
+	@include mq('md') {
+		margin-top: rem(38);
+	}
+}
+
+.form__item.form__item--radio {
+	@include mq('md') {
+		padding-top: rem(42);
+	}
+}
+
 .form__item dt {
   color: $black;
   font-family: $base-font-family;
@@ -146,10 +346,39 @@ form {
   background: $accent;
 }
 
+.form__item dt p {
+  color: #888;
+  font-family: $base-font-family;
+  font-size: rem(11);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}
+
 .form__item dd {
   @include mq('md') {
     margin-left: rem(60);
     flex-grow: 1;
+  }
+}
+
+.form__item-radio {
+  margin-top: rem(22);
+  @include mq('md') {
+    margin-top: 0;
+  }
+}
+
+.form__item-check {
+  margin-top: rem(21);
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: rem(21);
+	row-gap: rem(18);
+  @include mq('md') {
+    margin-top: 0;
+		column-gap: rem(32);
+		row-gap: rem(14);
   }
 }
 
@@ -162,4 +391,11 @@ form {
     margin-top: rem(24);
     padding-top: rem(72);
   }
+}
+
+.alert {
+	margin-top: rem(3);
+	color: $accent;
+	font-family: $base-font-family;
+	font-weight: $normal;
 }
