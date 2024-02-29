@@ -230,7 +230,7 @@
                 お名前<span>必須</span>
               </dt>
               <dd id="textSection">
-                <input type="text" name="name" placeholder="山田　太郎" required/>
+                <input type="text" name="name" id="text" placeholder="山田　太郎" required/>
                 <p class="alert">必須項目に入力してください。</p>
               </dd>
             </dl>
@@ -239,7 +239,7 @@
                 フリガナ<span>必須</span>
               </dt>
               <dd id="textSection2">
-                <input type="text" name="name" placeholder="ヤマダ　タロウ" required/>
+                <input type="text" name="kana" id="text2" placeholder="ヤマダ　タロウ" required/>
                 <p class="alert">必須項目に入力してください。</p>
               </dd>
             </dl>
@@ -248,7 +248,7 @@
                 電話番号<span>必須</span>
               </dt>
               <dd id="telSection">
-                <input type="tel" name="tel" placeholder="000-0000-0000" required/>
+                <input type="tel" name="tel" id="tel" placeholder="000-0000-0000" required/>
                 <p class="alert">必須項目に入力してください。</p>
               </dd>
             </dl>
@@ -257,7 +257,7 @@
                 メールアドレス<span>必須</span>
               </dt>
               <dd id="emailSection">
-                <input type="email" name="mail_address" placeholder="xxx@example.com" class="validate[]" required/>
+                <input type="email" name="mail_address" id="email" placeholder="xxx@example.com" class="validate[]" required/>
                 <p class="alert">必須項目に入力してください。</p>
               </dd>
             </dl>
@@ -266,8 +266,8 @@
                 初診/再診<span>必須</span>
               </dt>
               <dd class="form__item-radio" id="radioSection">
-                <label for="radio"><input type="radio" name="radio" value="ラジオボタン1" checked/><span>初診</span></label>
-                <label for="radio"><input type="radio" name="radio" value="ラジオボタン2" /><span>再診</span></label>
+                <label for="radio1"><input type="radio" id="radio1" name="radio" value="ラジオボタン1"/><span>初診</span></label>
+                <label for="radio2"><input type="radio" id="radio2" name="radio" value="ラジオボタン2" /><span>再診</span></label>
                 <p class="alert">必須項目に入力してください。</p>
               </dd>
             </dl>
@@ -276,35 +276,35 @@
                 診療内容<span>必須</span>
                 <p>※(複数選択可)</p>
               </dt>
-              <dd class="form__item-check" id="checkboxSection">
+              <dd class="form__item-check" id="checkSection">
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="虫歯" checked required/><span>虫歯</span></label>
+                  <label for="checkbox1"><input type="checkbox" id="checkbox1" name="checkbox" value="虫歯" checked required/><span>虫歯</span></label>
                 </div>
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="被せ物がとれた" required/><span>被せ物がとれた</span></label>
+                  <label for="checkbox2"><input type="checkbox" id="checkbox2" name="checkbox" value="被せ物がとれた" required/><span>被せ物がとれた</span></label>
                 </div>
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="矯正歯科" required/><span>矯正歯科</span></label>
+                  <label for="checkbox3"><input type="checkbox" id="checkbox3" name="checkbox" value="矯正歯科" required/><span>矯正歯科</span></label>
                 </div>
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="咬み合わせ" required/><span>咬み合わせ</span></label>
+                  <label for="checkbox4"><input type="checkbox" id="checkbox4" name="checkbox" value="咬み合わせ" required/><span>咬み合わせ</span></label>
                 </div>
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="歯周病" required/><span>歯周病</span></label>
+                  <label for="checkbox5"><input type="checkbox" id="checkbox5" name="checkbox" value="歯周病" required/><span>歯周病</span></label>
                 </div>
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="小児歯科" required/><span>小児歯科</span></label>
+                  <label for="checkbox6"><input type="checkbox" id="checkbox6" name="checkbox" value="小児歯科" required/><span>小児歯科</span></label>
                 </div>
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="入れ歯" required/><span>入れ歯</span></label>
+                  <label for="checkbox7"><input type="checkbox" id="checkbox7" name="checkbox" value="入れ歯" required/><span>入れ歯</span></label>
                 </div>
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="インプラント" required/><span>インプラント</span></label>
+                  <label for="checkbox8"><input type="checkbox" id="checkbox8" name="checkbox" value="インプラント" required/><span>インプラント</span></label>
                 </div>
                 <div class="form__item-check-container">
-                  <label for="checkbox"><input type="checkbox" name="checkbox" value="その他" required/><span>その他</span></label>
+                  <label for="checkbox9"><input type="checkbox" id="checkbox9" name="checkbox" value="その他" required/><span>その他</span></label>
+                  <p class="alert">必須項目に入力してください。</p>
                 </div>
-                <p class="alert">必須項目に入力してください。</p>
               </dd>
             </dl>
             <dl class="form__item">
@@ -335,11 +335,11 @@
                 お問い合わせ内容
               </dt>
               <dd>
-                <textarea name="contents" placeholder="ご自由にご記入ください。"></textarea>
+                <textarea name="contents" id="textarea" placeholder="ご自由にご記入ください。"></textarea>
               </dd>
             </dl>
             <div class="form__button">
-              <input type="submit" id="submitBtn" value="送　信" />
+              <input type="button" id="submitBtn" value="送　信" />
             </div>
           </form>
         </div>

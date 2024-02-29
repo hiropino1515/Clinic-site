@@ -88,6 +88,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // 全てのアラート文を非表示にする
     $(".alert").hide();
 
+    // 各入力フィールドの変更イベントを監視し、エラーメッセージを非表示にする
+    $("#text, #text2, #tel, #email, input[name='radio'], input[name='checkbox'], select, #textarea").change(function() {
+      // エラーメッセージを非表示にする
+      $(this).closest('.form__item').find('.alert').hide();
+    });
+
       $("#submitBtn").click(function() {
         // チェック用の変数sendFlag
         var sendFlag = true;
@@ -101,11 +107,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         }
 
         // textフィールドのチェック
-        if(!$("#text").val()){
+        if(!$("#text2").val()){
           $("#textSection2 .alert").show();
           sendFlag = false;
         }else{
-          $("#textSection .alert").hide();
+          $("#textSection2 .alert").hide();
         }
 
         // telフィールドのチェック
@@ -126,17 +132,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
         // ラジオボタンのチェック
         var radioChk = $('input[name="radio"]:checked').length;
-        if(radioChk == 0) {
-          $("#radioSection .alert").show;
+        if(radioChk === 0) {
+          $("#radioSection .alert").show();
           sendFlag = false;
         }else{
           $("#radioSection .alert").hide();
         }
 
         // チェックボックスのチェック
-        var checkboxChk = $('input[name=checkbox]:checked').length;
-        if(checkboxChk < 3){
-          $("#checkSection .alert").show;
+        var checkboxChk = $('input[name="checkbox"]:checked').length;
+        if(checkboxChk === 0){
+          $("#checkSection .alert").show();
           sendFlag = false;
         }else{
           $("#checkSection .alert").hide();
@@ -159,11 +165,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         }
 
         // 変数sendFlagの値をチェック
-        if(sendFlag == false){
-          return false;
+        if(sendFlag === false){
+          return false; // フォーム送信をキャンセル
         }
-
       });
-    });
   });
+});
 
