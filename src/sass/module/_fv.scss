@@ -1,29 +1,19 @@
 @use 'global' as *;
 
 .fv {
-  // position: relative;
 
-  .swiper {
-
-  }
-
-  .swiper-wrapper {
-
-  }
-  .swiper-slide {
-
-  }
-  
   .swiper-pagination {
-    top: 91%;
+    display: flex;
+    flex-direction: column;
+    top: 93%;
     transform: translateY(-50%);
-    left: rem(3);
+    left: rem(7);
     width: rem(14);
     height: rem(42);
     z-index: 10;
     @include mq('md') {
-      top: 94%;
-      left: rem(32);
+      top: 95%;
+      left: rem(37);
       width: rem(18);
       height: rem(54);
     }
@@ -37,7 +27,11 @@
       height: rem(8);
     }
   }
-  
+
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: rem(4) 0;
+  }
+
   .swiper-button-prev {
     position: absolute;
     top: 53%;

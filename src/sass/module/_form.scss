@@ -399,3 +399,14 @@ form {
 	font-family: $base-font-family;
 	font-weight: $normal;
 }
+
+.alert-message {
+	margin-top: rem(60);
+	padding: rem(8);
+	text-align: left;
+	display: inline-block;
+	color: $black;
+	font-family: $base-font-family;
+	font-weight: $bold;
+	border: 2px solid $accent;
+}

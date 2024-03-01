@@ -66,6 +66,35 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
+  // ページ内リンクの処理
+  $(function () {
+    $('a[href*="#"]').on('click', function () {
+      var scrollSpeed = 400;
+      var navigationHeight = $(".header").innerHeight();
+      var scrollToTarget = $(this.hash === '#' || '' ? 'html' : this.hash);
+      if (!scrollToTarget.length) return;
+      var scrollPosition = scrollToTarget.offset().top - navigationHeight - 60;
+      $('html, body').animate({
+        scrollTop: scrollPosition
+      }, scrollSpeed, 'swing');
+      return false;
+    });
+  });
+
+  // ページ読み込み時の処理
+  $(document).ready(function () {
+    var navigationHeight = $(".header").innerHeight();
+    var hash = window.location.hash;
+    if (hash && $(hash).length) {
+      var scrollPosition = $(hash).offset().top - navigationHeight - 60;
+      $('html, body').animate({
+        scrollTop: scrollPosition
+      }, 400, 'swing');
+    }
+  });
+
+
+
   // director__swiper
   const newSwiper = new Swiper('.director__swiper', {
     loop: true,
@@ -166,7 +195,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
         // 変数sendFlagの値をチェック
         if(sendFlag === false){
+          if($(".alert-message").length === 0) { // エラーメッセージがまだ表示されていない場合のみ追加
+              $(".form__button").append('<p class="alert-message">入力に問題があります。確認して再度お試しください。</p>');
+          }
           return false; // フォーム送信をキャンセル
+        } else {
+            // フォームが送信された後に特定のページにリダイレクトする
+            return true; // フォーム送信を許可
         }
       });
   });
