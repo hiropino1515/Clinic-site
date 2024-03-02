@@ -1,13 +1,5 @@
 @use 'global' as *;
 
-.archive {
-
-}
-
-.archive__inner {
-
-}
-
 .archive__contents {
   @include mq('md') {
     display: flex;
@@ -21,16 +13,8 @@
   }
 }
 
-.archive__list {
-
-}
-
 .archive__item + .archive__item {
   margin-top: rem(20);
-}
-
-.archive__link {
-
 }
 
 .archive__pagenavi {
@@ -132,6 +116,10 @@
   }
 }
 
+.previouspostslink.previouspostslink--single p {
+  display: inline-block;
+}
+
 .previouspostslink span {
   content: "";
   position: absolute;
@@ -175,6 +163,10 @@
   @include mq('md') {
     padding: rem(7) rem(38) rem(8) rem(16);
   }
+}
+
+.nextpostslink.nextpostslink--single p {
+  display: inline-block;
 }
 
 .nextpostslink span {

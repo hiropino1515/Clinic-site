@@ -188,7 +188,7 @@
       </div>
     </div>
     <div class="sub-fv__button">
-      <a href="#" class="button-web">
+      <a href="page-reservation.html" class="button-web">
         <span></span>
         <p>WEB予約<br>
         はこちら</p>
@@ -266,8 +266,8 @@
                 初診/再診<span>必須</span>
               </dt>
               <dd class="form__item-radio" id="radioSection">
-                <label for="radio1"><input type="radio" id="radio1" name="radio" value="ラジオボタン1"/><span>初診</span></label>
-                <label for="radio2"><input type="radio" id="radio2" name="radio" value="ラジオボタン2" /><span>再診</span></label>
+                <label for="radio1"><input type="radio" id="radio1" name="radio" value="ラジオボタン1" required/><span>初診</span></label>
+                <label for="radio2"><input type="radio" id="radio2" name="radio" value="ラジオボタン2" required/><span>再診</span></label>
                 <p class="alert">必須項目に入力してください。</p>
               </dd>
             </dl>
@@ -278,7 +278,7 @@
               </dt>
               <dd class="form__item-check" id="checkSection">
                 <div class="form__item-check-container">
-                  <label for="checkbox1"><input type="checkbox" id="checkbox1" name="checkbox" value="虫歯" checked required/><span>虫歯</span></label>
+                  <label for="checkbox1"><input type="checkbox" id="checkbox1" name="checkbox" value="虫歯" required/><span>虫歯</span></label>
                 </div>
                 <div class="form__item-check-container">
                   <label for="checkbox2"><input type="checkbox" id="checkbox2" name="checkbox" value="被せ物がとれた" required/><span>被せ物がとれた</span></label>
@@ -326,9 +326,9 @@
                 希望日
               </dt>
               <dd>
-                <input type="date" name="date" value="希望日1" />
-                <input type="date" name="date" value="希望日2" />
-                <input type="date" name="date" value="希望日3" />
+                <input type="date" name="date" />
+                <input type="date" name="date" />
+                <input type="date" name="date" />
               </dd>
             </dl>
             <dl class="form__item">

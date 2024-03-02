@@ -118,6 +118,105 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(".alert").hide();
 
     // 各入力フィールドの変更イベントを監視し、エラーメッセージを非表示にする
+    $("#contactText, #contactText2, #contactTel, #contactEmail, #contactTextarea").change(function() {
+        // エラーメッセージを非表示にする
+        $(this).closest('.form__item').find('.alert').hide();
+    });
+
+    function validateForm() {
+        // チェック用の変数sendFlag
+        var sendFlag = true;
+
+        // textフィールドのチェック
+        if(!$("#contactText").val()){
+            $("#contactTextSection .alert").show();
+            sendFlag = false;
+        }else{
+            $("#contactTextSection .alert").hide();
+        }
+
+        // textフィールドのチェック
+        if(!$("#contactText2").val()){
+            $("#contactTextSection2 .alert").show();
+            sendFlag = false;
+        }else{
+            $("#contactTextSection2 .alert").hide();
+        }
+
+        // telフィールドのチェック
+        if(!$("#contactTel").val()){
+            $("#contactTelSection .alert").show();
+            sendFlag = false;
+        }else{
+            $("#contactTelSection .alert").hide();
+        }
+
+        // emailフィールドのチェック
+        if(!$("#contactEmail").val()){
+            $("#contactEmailSection .alert").show();
+            sendFlag = false;
+        }else{
+            $("#contactEmailSection .alert").hide();
+        }
+
+        // ラジオボタンのチェック
+        var radioChk = $('input[name="contactRadio"]:checked').length;
+        if(radioChk === 0) {
+            $("#contactRadioSection .alert").show();
+            sendFlag = false;
+        }else{
+            $("#contactRadioSection .alert").hide();
+        }
+
+        // チェックボックスのチェック
+        var checkboxChk = $('input[name="contactCheckbox"]:checked').length;
+        if(checkboxChk === 0){
+            $("#contactCheckSection .alert").show();
+            sendFlag = false;
+        }else{
+            $("#contactCheckSection .alert").hide();
+        }
+
+        // セレクトボックスのチェック
+        if($("#contactSelect").val() == "none") {
+            $("#contactSelectSection .alert").show();
+            sendFlag = false;
+        }else{
+            $("#contactSelectSection .alert").hide();
+        }
+
+        // 複数行入力フィールドのチェック
+        if(!$("#contactTextarea").val()) {
+            $("#contactTextareaSection .alert").show();
+            sendFlag = false;
+        }else{
+            $("#contactTextareaSection .alert").hide();
+        }
+
+        return sendFlag;
+      }
+      $("#contactSubmitBtn").click(function(event) {
+        event.preventDefault(); // フォームのデフォルトの送信を防ぐ
+
+        if (validateForm()) {
+            console.log("フォームが正常に送信されました");
+            alert("送信成功！");
+            // フォームが送信された後に特定のページにリダイレクトする
+            window.location.href = "page-contact-thanks.html"; // 送信成功時にリダイレクト
+        } else {
+            console.log("送信がキャンセルされました");
+            // エラーメッセージを追加
+            $(".form__button").append('<p class="alert-message">入力に問題があります。確認して再度お試しください。</p>');
+        }
+    });
+  });
+
+  // ReservationForm
+  $(function() {
+    // 全てのアラート文を非表示にする
+    $(".alert").hide();
+
+    // 各入力フィールドの変更イベントを監視し、エラーメッセージを非表示にする
     $("#text, #text2, #tel, #email, input[name='radio'], input[name='checkbox'], select, #textarea").change(function() {
       // エラーメッセージを非表示にする
       $(this).closest('.form__item').find('.alert').hide();
@@ -200,6 +299,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           }
           return false; // フォーム送信をキャンセル
         } else {
+            alert("送信成功！");
+            window.location.href = "page-reservation-thanks.html"; // 送信成功時にリダイレクト
             // フォームが送信された後に特定のページにリダイレクトする
             return true; // フォーム送信を許可
         }
